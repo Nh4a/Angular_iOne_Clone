@@ -1,0 +1,234 @@
+<p id="top"></p>
+<app-navbar [imgLogo]="iOneLogo" [appleLogo]="appleReseller"></app-navbar>
+<div class="max-w-[1120px] h-fit" style="margin: auto; padding-top: 60px">
+  <!--    slide container-->
+  <div class="w-full h-fit bg-white">
+
+    <!--    </swiper-container>-->
+
+    <swiper-container class="w-full" pagination="{true}" modules="{[Pagination]}" className="mySwiper">
+      <swiper-slide
+        ><img
+          class="h-full"
+          src="https://www.ione.com.kh/wp-content/uploads/2026/05/Web-MacBook-Neo-Available-Now-Cambodia-scaled.jpg"
+          alt=""
+      /></swiper-slide>
+      <swiper-slide><img
+        class="h-full"
+        src="https://www.ione.com.kh/wp-content/uploads/2026/03/Web-Banner-iPhone-17e-Available-Now-06-scaled.png"
+        alt=""
+      /></swiper-slide>
+      <swiper-slide><img
+        class="h-full"
+        src="https://www.ione.com.kh/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-29-at-1.50.49-PM-1.jpeg"
+        alt=""
+      /></swiper-slide>
+      <swiper-slide>
+        <img src="https://www.ione.com.kh/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-29-at-1.51.02-PM.jpeg" alt="">
+      </swiper-slide>
+      <swiper-slide>
+        <img src="https://www.ione.com.kh/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-29-at-1.51.39-PM-1.jpeg" alt="">
+      </swiper-slide>
+        <swiper-slide>
+        <img src="https://www.ione.com.kh/wp-content/uploads/2025/10/Web-BannerAvailable-Now-AirPods-Pro-3.jpg" alt="">
+      </swiper-slide>
+      <swiper-slide>
+        <img src="https://www.ione.com.kh/wp-content/uploads/2025/10/Web-BannerAvailable-Now-AirPods-Pro-3.jpg" alt="">
+      </swiper-slide>
+      <swiper-slide>
+        <img src="https://www.ione.com.kh/wp-content/uploads/2025/09/4-Web-17-scaled.png" alt="">
+      </swiper-slide>
+      <swiper-slide>
+        <img src="https://www.ione.com.kh/wp-content/uploads/2025/09/4-Web-17-Air-scaled.png" alt="">
+      </swiper-slide>
+        <swiper-slide>
+          <img src="https://www.ione.com.kh/wp-content/uploads/2025/07/Artboard-8100.png" alt="">
+        </swiper-slide>
+   <swiper-slide>
+          <img src="https://www.ione.com.kh/wp-content/uploads/2025/07/ipad-pro-hero-cambodia.png" alt="">
+        </swiper-slide>
+
+    </swiper-container>
+  </div>
+</div>
+
+<div class="max-w-[1120px] h-fit center" style="margin-bottom: 50px">
+  <h1 class="text-center text-[24px] md:text-[32px] font-bold" style="padding: 40px 0">
+    Explore the latest Apple products.
+  </h1>
+  <div class="w-full grid grid-cols-1 md:grid-cols-4 lg:gap-4 gap-2 body-padding">
+    @for (item of latest_product; track item.name) {
+      <div class="w-full">
+        <app-card [img_path]="item.img" [name]="item.name" [price]="item.price"></app-card>
+      </div>
+    }
+  </div>
+</div>
+
+<div class="max-w-[1120px] h-fit center" style="margin-bottom: 50px">
+  <h1 class="text-center text-[24px] md:text-[32px] font-bold" style="padding: 40px 0">
+    Find the perfect accessories for you.
+  </h1>
+  <div class="w-full grid grid-cols-1 md:grid-cols-6 gap-2 lg:gap-4 body-padding">
+    @for (item of accessories; track item.name) {
+      <app-perfect-accessories-card
+        [img]="item.img"
+        [name]="item.name"
+      ></app-perfect-accessories-card>
+    }
+  </div>
+</div>
+<div class="max-w-[1120px] h-fit center">
+  <h1 class="text-center text-[24px] md:text-[32px] font-bold" style="padding: 40px 0">
+    Our featured Apple accessories.
+  </h1>
+  <div class="w-full grid grid-cols-1 md:grid-cols-4 lg:gap-4 gap-2 body-padding">
+    @for (item of featured_apple_accessories; track item.name) {
+      <app-featured-card [name]="item.name" [image]="item.img"></app-featured-card>
+    }
+  </div>
+</div>
+
+<div class="h-20 bg-transparent"></div>
+
+<div
+  class="relative max-w-[1120px] h-fit center gap-8 md:gap-4 flex flex-col md:flex-row font-medium body-padding"
+>
+  <div class="flex flex-col gap-4 md:sticky top-25 lg:top-20 w-full md:w-[45%] h-fit ">
+    <p class="text-[18px] text-gray-600 font-bold">Discover our services</p>
+    <p
+      class="text-[32px] lg:text-[52px] font-bold text-[]"
+      style="
+        background: linear-gradient(to right, blue, #ff3c3c);
+        background-clip: text;
+        color: transparent;
+      "
+    >
+      Enjoy benefits with our many iOne services
+    </p>
+    <p class="text-[18px] text-gray-500" style="padding: 10px 0">
+      Our installment and Trade-In packages, device insurance plans &amp; free training sessions
+      ensure the best experiences for our customers!
+    </p>
+    <button
+      class="flex items-center font-bold text-white gap-2 bg-gray-700 rounded-3xl block w-fit"
+      style="padding: 14px 16px"
+    >
+      <span>Learn more</span
+      ><span class="border-2 rounded-2xl" style="padding: 2px"
+        ><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 15 15">
+          <path d="M0 0h15v15H0z" fill="none" />
+          <path
+            fill="currentColor"
+            d="M8.293 2.293a1 1 0 0 1 1.414 0l4.5 4.5a1 1 0 0 1 0 1.414l-4.5 4.5a1 1 0 0 1-1.414-1.414L11 8.5H1.5a1 1 0 0 1 0-2H11L8.293 3.707a1 1 0 0 1 0-1.414"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+
+  <!-- serrvice card -->
+  <div class="w-full md:w-[65%] h-fit flex flex-col gap-8">
+    @for (item of services; track item.title; let i = $index) {
+      @if ((i + 1) % 2 !== 0) {
+        <app-card-larg [img]="item.img" [title]="item.title" />
+      } @else {
+        <app-card-larg-revers [img]="item.img" [title]="item.title" />
+      }
+    }
+  </div>
+</div>
+
+<div
+  class="max-w-[1120px] body-padding h-fit center flex flex-col gap-[10px]"
+  style="margin-top: 150px"
+>
+  <p class="text-center text-[18px] text-gray-600 font-medium">
+    Apple Authorized Reseller in Cambodia
+  </p>
+  <p
+    class="text-center text-[38px] font-bold text-transparent"
+    style="
+      background-image: linear-gradient(
+        to right,
+        rgb(61, 116, 255),
+        rgb(161, 104, 242),
+        rgb(255, 79, 129)
+      );
+      background-clip: text;
+    "
+  >
+    Visit our Phnom Penh Stores
+  </p>
+  <p class="max-w-[600px] text-[20px] text-center center text-gray-600">
+    iOne operates two boutique Apple Reseller stores in Phnom Penh’s premier AEON mega malls.
+  </p>
+</div>
+<div class="h-[50px]"></div>
+<div class="body-padding max-w-[1120px] h-fit grid grid-cols-1 md:grid-cols-3 gap-4 center">
+  @for (item of locations; track item.name) {
+    <app-location-card [img]="item.img" [loaction]="item.name" />
+  }
+</div>
+
+<div class="max-w-[1120px] h-fit center flex flex-col gap-[10px]" style="margin-top: 150px">
+  <p
+    class="text-center text-[38px] font-bold text-transparent"
+    style="
+      background-image: linear-gradient(
+        to right,
+        rgb(61, 116, 255),
+        rgb(161, 104, 242),
+        rgb(255, 79, 129)
+      );
+      background-clip: text;
+    "
+  >
+    iOne Installment Process
+  </p>
+  <p class="max-w-[600px] text-[20px] text-center center text-gray-600">
+    iOne offers a range of installment services for our customers in cooperation with our trusted
+    financial partners.
+  </p>
+</div>
+
+<div
+  class="grid grid-cols-1 max-w-[1120px] h-fit md:grid-cols-4 center gap-8"
+  style="margin-top: 40px"
+>
+  @for (item of installment_process; track item.title) {
+    <div class="w-full body-padding">
+      <app-installment-process-card
+        [title]="item.title"
+        [desc]="item.description"
+      ></app-installment-process-card>
+    </div>
+  }
+</div>
+<button
+  class="body-padding block center bg-gray-800 text-white font-semibold flex gap-2 rounded-4xl hover:gap-4 transition-all"
+  style="padding: 18px; margin-top: 100px"
+>
+  <span>Check Installment Interest</span>
+  <span
+    ><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.5em" viewBox="0 0 12 24">
+      <path d="M0 0h12v24H0z" fill="none" />
+      <defs>
+        <path
+          id="SVG1pzpbdYY"
+          fill="currentColor"
+          d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z"
+        />
+      </defs>
+      <use fill-rule="evenodd" href="#SVG1pzpbdYY" transform="rotate(-180 5.02 9.505)" /></svg
+  ></span>
+</button>
+<div class="h-[100px]"></div>
+<img src="https://www.ione.com.kh/wp-content/uploads/2025/06/ionegpt-logo.gif" class="w-[50px] absolute bottom-25 right-10 hover:cursor-pointer fixed" alt="">
+<a href="#top" style="padding: 4px" class="hover:bottom-12 hover:shadow-2xl rounded-3xl bg-white absolute bottom-10 right-10 hover:cursor-pointer fixed">
+  <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24">
+    <path d="M0 0h24v24H0z" fill="none" />
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m6 11l6-6l6 6M6 19l6-6l6 6" />
+  </svg>
+</a>
+<app-footer [iOne_log]="iOneLogo" />
