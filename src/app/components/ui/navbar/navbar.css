@@ -1,0 +1,12 @@
+.nav:hover  .link-hover-style{
+  width:100%;
+  cursor: pointer;
+}
+nav:hover{
+  cursor:pointer;
+}
+.link-hover-style{
+  transition: all 0.15s ease-in-out;
+  border-radius: 14px;
+  background-image: linear-gradient(to right, blue, #ff3c3c);
+}

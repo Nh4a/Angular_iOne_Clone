@@ -1,0 +1,12 @@
+# Ignore everything
+src/app
+
+# Keep Git metadata
+!.gitignore
+
+# Keep src and dist folders
+!src/
+!src/**
+
+!dist/
+!dist/**
